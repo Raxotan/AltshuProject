@@ -5,32 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
   <title>AltshuProject</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="./assets/images/Logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="color-back">
-    <header class="container">
-        <div class="logo"><a href="#">blog|</a></div>
-        <nav>
-            <ul class = "navigation-header">
-            <li><a href="#Work">Work</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Blog">Blog</a></li>
-            <li><a href="#Contact">Contact</a></li>
-          </ul>
-          <a href="">
-            <div class="burger-container">
-              <div class="burger">
-                <span></span>
-              </div>
-            </div>
-          </a>
-        </nav>
-    </header>
-  </div>
+  <?php
+    include ("./assets/blocks/header.php");
+  ?>
   <main>
     <div class="color-back">
       <section class="intro container">
@@ -43,7 +27,7 @@
             <span>Write me!</span>
           </a>
           <section class="passed-course">
-            <div class="passed-img"><img src="/assets/images/cup.svg" alt="#"></div>
+            <div class="passed-img"><img src="./assets/images/cup.svg" alt="#"></div>
             <div>
               <h2>Passed the Altshu Web Developing Course</h2>
               <p>
@@ -54,7 +38,7 @@
             </div>
           </section>
         </div>
-        <img src="/assets/images/sitting.svg" alt="" class="sitting">
+        <img src="./assets/images/sitting.svg" alt="" class="sitting">
       </section>
     </div>
     <section class="about container">
@@ -63,12 +47,24 @@
         <h4 id="About">About me</h4>
         <article class="about-reviews-stars">
           <h5 class="unvisible">Grade</h5>
+          <?php 
+            for($i = 1; $i <= 5; $i++)
+            {
+              echo "<img src='./assets/images/star.svg'>";
+            }
+          ?>
         </article>
         <article class="about-reviews-text">
           <h5 class="unvisible">review text</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dignissimos distinctio itaque harum placeat eveniet suscipit magni accusantium, voluptatem optio porro eum sapiente numquam fuga ab ratione quod.
+          </p>
         </article>
         <article class="about-reviewer">
-          <h5 class="unvisible">Grade</h5>
+          <div>
+            <h3>Name</h3>
+            <h5>Middle+ FullStack Developer in GEROPHARM</h5>
+          </div>
         </article>
         </section>
         <section class="about-right-collumn">
