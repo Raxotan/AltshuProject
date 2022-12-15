@@ -166,49 +166,30 @@
           </section>
       </section>
     </div>
-    <section class="blog">
+    <section class="blog container">
       <h4 id="Blog">blog</h4>
       <section class="blog-first-row">
         <h2>Words On Design, Tech & Other Things I Love</h2>
-        <a href="#">Explore all posts</a>
+        <a href="#"><span class="span">Explore all posts</span></a>
       </section>
-      <article>
-        <h3>How I’ve started learning web</h3>
-        <img src="#" alt="How I’ve started learning web">
-        <p>
-          Vivamus mattis eu odio non aliquam. Vestibulum tristique congue laoreet. Nulla facilisi.
-        </p>
-        <a href="#">View post</a>
-      </article>
-      <article>
-        <h3>Why does JavaScript is so exciting</h3>
-        <img src="#" alt="Why does JavaScript is so exciting">
-        <p>
-          Vivamus mattis eu odio non aliquam. Vestibulum tristique congue laoreet. Nulla facilisi.
-        </p>
-        <a href="#">View post</a>
-      </article>
-      <article>
-        <h3>How I’ve developed this site</h3>
-        <img src="#" alt="How I’ve developed this site">
-        <p>
-          Vivamus mattis eu odio non aliquam. Vestibulum tristique congue laoreet. Nulla facilisi. PHP
-        </p>
-        <a href="#">View post</a>
-      </article>
-    </section>
-    <section>
-      <h2>My work and information about me</h2> <!-- Валидатор не ругайся -->
-      <section>
-        <h3>Work</h3>
-        <p>Favorite projects, award-winning campaigns and more.</p>
-        <a href="#">View all <img src="assets/images/arrow2.svg" alt="arrow"></a>
-      </section>
-      <section>
-        <h3>About</h3>
-        <p>My journey, career highlights and everything else you need to know.</p>
-        <a href="#">Get to know me <img src="assets/images/arrow2.svg" alt="arrow"></a>
-      </section>
+      
+      <?php
+        for($i=1; $i<=3; $i++){
+          echo <<<HTML
+            <article class="blocks">
+            <img src="./assets/images/Rectangle.png" alt="How I’ve started learning web">
+            <div class="center-column">
+              <p class="data">21 Oct, 2022</p>
+              <h3>How I’ve started learning web</h3>
+              <p>
+                Vivamus mattis eu odio non aliquam. Vestibulum tristique congue laoreet. Nulla facilisi.
+              </p>
+            </div>
+            <a href="#">View post</a>
+          </article>
+          HTML;
+        }
+      ?>
     </section>
   </main>
   <footer>
